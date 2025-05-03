@@ -2,10 +2,9 @@
     <h2 class="price-card__title">Plano {{tipo}}</h2>
     <p class="price-card__price">R$ {{preco}},90<span>/mês</span></p>
     <ul class="price-card__features">
-      <li>✔ {{beneficios.projetos}} projetos</li>
-      <li>✔ Suporte {{beneficios.suporte}}</li>
-      <li>✔ Acesso {{beneficios.acesso}}</li>
+      <li>✔ {{beneficios?.projetos}} projetos</li>
+      <li>✔ Suporte {{beneficios?.suporte}}</li>
+      <li>✔ Acesso {{beneficios?.acesso}}</li>
     </ul>
    <app-card-button></app-card-button>
   </div>
-  
