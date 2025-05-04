@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, INJECTOR, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-card',
@@ -6,12 +6,28 @@ import { Component } from '@angular/core';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent {
-  tipo = 'Simples'
-  preco = 100
+  @Input({required: true, alias: 'tipo'})
+  tipo: string = ''
+  
+  @Input({required:true, alias:'preco'})
+  preco: number = 0
 
-  beneficios = {
-    projetos: 10,
-    suporte: "premium",
-    acesso: "ilimitado"
+  @Input({required: false})
+  cardStyle: 'white' | 'orange' = 'white'
+  
+  @Input() beneficios: {
+    projetos: number;
+    suporte: string;
+    acesso: string;
+  } = {
+    projetos: 0,
+    suporte: '',
+    acesso: ''
+  };
+
+  @Output()
+  buttonCLickedEmiter = new EventEmitter<void>()
+  buttonClicked(){
+    this.buttonCLickedEmiter.emit()
   }
 }

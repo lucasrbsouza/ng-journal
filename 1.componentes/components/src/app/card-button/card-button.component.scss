@@ -8,17 +8,34 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
   
-    &:hover {
-      background-color: #357ABD;
+    &--white{
+      background-color: #4A90E2;
+      color: white;
+      &:hover {
+        background-color: #357ABD;
+      }
+      &:active {
+        background-color: #2e6bb5;
+      }
+    }
+    &--purple{
+      background-color: purple;
+      color: white;
+      &:hover {
+        background-color: purple;
+      }
+      &:active {
+        background-color: purple;
+      }
     }
   
     &:focus {
       outline: none;
       box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.3);
     }
-  
-    &:active {
-      background-color: #2e6bb5;
-    }
+    
+   
+
+
   }
   

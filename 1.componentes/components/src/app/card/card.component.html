@@ -1,10 +1,15 @@
-<div class="price-card">
+<div class="price-card"
+      [class]="{
+        'price-card--orange': cardStyle === 'orange' ? true : false,
+        'price-card--white': cardStyle === 'white' ? true : false,
+      }"
+>
     <h2 class="price-card__title">Plano {{tipo}}</h2>
-    <p class="price-card__price">R$ {{preco}},90<span>/mês</span></p>
+    <p class="price-card__price">R$ {{preco}},99<span>/mês</span></p>
     <ul class="price-card__features">
       <li>✔ {{beneficios?.projetos}} projetos</li>
       <li>✔ Suporte {{beneficios?.suporte}}</li>
       <li>✔ Acesso {{beneficios?.acesso}}</li>
     </ul>
-   <app-card-button></app-card-button>
+   <app-card-button [text]="'Adquirir'" [style]="cardStyle === 'orange' ? 'white' : 'purple'" (clicked)="buttonClicked()"></app-card-button>
   </div>

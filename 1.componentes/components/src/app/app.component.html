@@ -1,2 +1,17 @@
-<app-card></app-card>
-<app-card></app-card>
+<app-card [tipo]="'Premium'" [preco]="199" [beneficios]="{
+    projetos: 10,
+    suporte: 'ilimitado',
+    acesso: 'completo'
+}" 
+[cardStyle]="'white'"
+(buttonCLickedEmiter)="onCardButtonClicked()"
+></app-card>
+
+<app-card [tipo]="'Simples'" [preco]="59" [beneficios]="{
+    projetos: 5,
+    suporte: '2 vezes semanal',
+    acesso: 'incompleto'
+}" 
+[cardStyle]="'orange'"
+(buttonCLickedEmiter)="onCardButtonClicked()"
+></app-card>

@@ -1,1 +1,9 @@
-<button class="price-button">Assinar agora</button>
+<button 
+    class="price-button"
+    [class] = "{
+        'price-button--white': buttonStyle === 'white' ? true : false,
+        'price-button--purple': buttonStyle === 'purple' ? true : false
+    }"
+
+    (click)="onButtonClicked()"
+>{{buttonText}}</button>
