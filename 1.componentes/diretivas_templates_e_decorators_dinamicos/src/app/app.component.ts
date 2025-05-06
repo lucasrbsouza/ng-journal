@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'diretivas_templates_e_decorators_dinamicos';
+  clicou(input: HTMLInputElement){
+    alert(input.value)
+  }
+
+  @ViewChild('input_meu')
+  meuInputEl!: ElementRef<HTMLInputElement>;
+
+  udpateInputText(){
+    this.meuInputEl.nativeElement.value = 'Texto Ataualizado'
+  }
 }
+
