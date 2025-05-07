@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { FilhoComponent } from './filho/filho.component';
 import { DiretivaComponent } from './diretiva/diretiva.component';
+import { HighlightDirective } from './diretiva/highlight.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     FilhoComponent,
-    DiretivaComponent
+    DiretivaComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
