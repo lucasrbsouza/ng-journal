@@ -8,7 +8,7 @@ import { FilhoComponent } from './filho/filho.component';
 import { DiretivaComponent } from './diretiva/diretiva.component';
 import { HighlightDirective } from './diretiva/highlight.directive';
 import { HighlightBotaoDirective } from './diretiva/highlight-botao.directive';
-import { HighlightStyleDirective } from './highlight-style.directive';
+import { HighlightStyleDirective } from './diretiva/highlight-style.directive';
 
 @NgModule({
   declarations: [
