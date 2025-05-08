@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FocusSecondInputDirectiveDirective } from './focus-second-input-directive.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FocusSecondInputDirectiveDirective
   ],
   imports: [
     BrowserModule,
